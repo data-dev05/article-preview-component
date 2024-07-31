@@ -14,7 +14,7 @@ body {
   background-color: hsl(210, 46%, 95%);
   display: grid;
   place-items: center;
-  padding: 3rem 0;
+  min-height: 100vh;
 }
 
 main {
@@ -22,6 +22,7 @@ main {
   max-width: 400px;
   background-color: white;
   border-radius: 1rem;
+  margin: 3rem;
 }
 main > img {
   width: 100%;
@@ -80,20 +81,21 @@ div {
   height: 3rem;
 }
 
-#share-active {
+.share-active {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-#share-active p {
+.share-active p {
   text-transform: uppercase;
   letter-spacing: 0.5rem;
   font-size: 0.8rem;
   color: hsl(212, 23%, 69%);
   user-select: none;
 }
-#share-active img:hover {
+.share-active img:hover {
   cursor: pointer;
+  transform: scale(1.5);
 }
 
 button {
@@ -111,6 +113,60 @@ button:hover {
 }
 .button-active path {
   fill: white;
+}
+
+#share-active-desktop {
+  background-color: hsl(217, 19%, 35%);
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  position: absolute;
+  transform: translate(50%, -50%);
+  transform-origin: center;
+  right: 4rem;
+  bottom: 6rem;
+  display: none;
+}
+#share-active-desktop .dialog-arrow {
+  flex: 0 0 auto;
+  position: absolute;
+  bottom: -1.5rem;
+  left: 5.5rem;
+  z-index: -1;
+}
+#share-active-desktop .dialog-arrow::after {
+  content: "";
+  position: absolute;
+  border-top: 36px solid hsl(217, 19%, 35%);
+  border-left: 36px solid transparent;
+  border-right: 36px solid transparent;
+  left: -2px;
+  top: -2px;
+}
+
+@media (min-width: 765px) {
+  html {
+    font-size: calc(13px + 0.1vw);
+  }
+  main {
+    position: relative;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 70% 30%;
+    grid-template-areas: "image description" "image share";
+    max-width: 800px;
+  }
+  main > img {
+    height: 100%;
+    max-height: none;
+    grid-area: image;
+    border-radius: 1rem 0 0 1rem;
+  }
+  section {
+    grid-area: description;
+  }
+  #div-inactive-mobile {
+    grid-area: share;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
