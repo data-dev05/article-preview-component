@@ -55,7 +55,12 @@ div {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 2.5rem;
+}
+
+#div-active-mobile {
+  background-color: hsl(217, 19%, 35%);
   border-radius: 0 0 1rem 1rem;
+  display: none;
 }
 
 #user {
@@ -79,13 +84,16 @@ div {
   display: flex;
   align-items: center;
   gap: 1rem;
-  display: none;
 }
 #share-active p {
   text-transform: uppercase;
   letter-spacing: 0.5rem;
   font-size: 0.8rem;
   color: hsl(212, 23%, 69%);
+  user-select: none;
+}
+#share-active img:hover {
+  cursor: pointer;
 }
 
 button {
@@ -96,6 +104,13 @@ button {
 }
 button:hover {
   cursor: pointer;
+}
+
+.button-active {
+  background-color: hsl(214, 17%, 51%);
+}
+.button-active path {
+  fill: white;
 }
 
 /*# sourceMappingURL=styles.css.map */

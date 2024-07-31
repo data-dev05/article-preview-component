@@ -53,12 +53,16 @@ h1 {
 }
 
 div {
-    // background-color: $very-dark-grayish-blue;
     display: flex;
     justify-content:space-between ;
     align-items: center;
     padding: 1.5rem 2.5rem;
+}
+
+#div-active-mobile {
+    background-color: $very-dark-grayish-blue;
     border-radius: 0 0 1rem 1rem;
+    display: none;
 }
 
 #user {
@@ -91,9 +95,13 @@ div {
         letter-spacing: 0.5rem;
         font-size: 0.8rem;
         color: $grayish-blue;
+        user-select: none;
     }
 
-    display: none;
+    img:hover {
+        cursor: pointer;
+    }
+
 }
 
 button {
@@ -104,5 +112,13 @@ button {
 
     &:hover {
         cursor: pointer;
+    }
+}
+
+.button-active {
+    background-color: $desaturated-dark-blue;
+
+    path {
+        fill: white;
     }
 }
