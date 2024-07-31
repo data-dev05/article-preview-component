@@ -18,16 +18,84 @@ body {
 }
 
 main {
-  width: 90%;
-  max-width: 450px;
+  width: 85%;
+  max-width: 400px;
   background-color: white;
   border-radius: 1rem;
 }
 main > img {
   width: 100%;
-  height: 45vw;
+  height: 54vw;
   max-height: 225px;
   object-fit: cover;
+  object-position: center 20%;
+  border-radius: 1rem 1rem 0 0;
+}
+
+section {
+  padding: 2.5rem 2.5rem 0.5rem;
+}
+
+h1 {
+  color: hsl(217, 19%, 35%);
+  font-size: 1.2rem;
+  line-height: 1.5em;
+  margin-bottom: 1em;
+}
+
+#description {
+  color: hsl(214, 17%, 51%);
+  font-weight: 700;
+  line-height: 1.5em;
+  margin-bottom: 1em;
+}
+
+div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2.5rem;
+  border-radius: 0 0 1rem 1rem;
+}
+
+#user {
+  display: flex;
+  gap: 1rem;
+}
+#user #name {
+  color: hsl(217, 19%, 35%);
+  font-weight: 700;
+}
+#user #date {
+  color: hsl(212, 23%, 69%);
+}
+#user > img {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+}
+
+#share-active {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  display: none;
+}
+#share-active p {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-size: 0.8rem;
+  color: hsl(212, 23%, 69%);
+}
+
+button {
+  border: none;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+button:hover {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=styles.css.map */
